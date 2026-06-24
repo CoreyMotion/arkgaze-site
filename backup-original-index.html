@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Automation Agency | Scale Faster With AI-Driven Growth Systems</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --neon-green: #00ff88;
+            --dark-green: #00cc6a;
+            --black: #000000;
+            --dark-gray: #0a0a0a;
+            --darker-gray: #050505;
+            --light-gray: #1a1a1a;
+            --text-gray: #a0a0a0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: var(--black);
+            color: #ffffff;
+            overflow-x: hidden;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--black) 0%, var(--dark-gray) 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            padding: 2rem;
+            max-width: 1200px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 8vw, 6rem);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff 0%, var(--neon-green) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: clamp(1.1rem, 2vw, 1.5rem);
+            color: var(--text-gray);
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: var(--neon-green);
+            color: var(--black);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 40px rgba(0, 255, 136, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 50px rgba(0, 255, 136, 0.5);
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        /* Floating 3D Elements */
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+
+        .tech-element {
+            position: absolute;
+            opacity: 0.6;
+            animation: float 6s ease-in-out infinite;
+            transition: transform 0.1s ease-out;
+        }
+
+        .tech-element img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 0 20px rgba(0, 255, 136, 0.3));
+        }
+
+        .tech-element:nth-child(1) {
+            width: 120px;
+            height: 120px;
+            top: 15%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .tech-element:nth-child(2) {
+            width: 100px;
+            height: 100px;
+            top: 60%;
+            left: 15%;
+            animation-delay: 1s;
+        }
+
+        .tech-element:nth-child(3) {
+            width: 140px;
+            height: 140px;
+            top: 20%;
+            right: 10%;
+            animation-delay: 2s;
+        }
+
+        .tech-element:nth-child(4) {
+            width: 110px;
+            height: 110px;
+            top: 65%;
+            right: 15%;
+            animation-delay: 1.5s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-30px) rotate(5deg);
+            }
+        }
+
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 8rem 0;
+            position: relative;
+        }
+
+        /* Social Proof Banner */
+        .social-proof {
+            background: var(--darker-gray);
+            padding: 4rem 0;
+            border-top: 1px solid rgba(0, 255, 136, 0.1);
+            border-bottom: 1px solid rgba(0, 255, 136, 0.1);
+        }
+
+        .social-proof h3 {
+            text-align: center;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 2.5rem;
+            font-weight: 500;
+        }
+
+        .logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .logo-item {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-gray);
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+
+        .logo-item:hover {
+            opacity: 1;
+            color: var(--neon-green);
+            transform: scale(1.1);
+        }
+
+        /* Case Studies */
+        .case-studies {
+            background: var(--black);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ffffff 0%, var(--neon-green) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+        }
+
+        .section-header p {
+            color: var(--text-gray);
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .case-card {
+            background: var(--light-gray);
+            border-radius: 20px;
+            padding: 2.5rem;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0, 255, 136, 0.1);
+            transition: all 0.4s ease;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+        .case-card.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .case-card:hover {
+            border-color: var(--neon-green);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 255, 136, 0.2);
+        }
+
+        .case-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--neon-green), var(--dark-green));
+        }
+
+        .case-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(0, 255, 136, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .case-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        .case-card p {
+            color: var(--text-gray);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .case-stats {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .stat {
+            flex: 1;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--neon-green);
+            margin-bottom: 0.3rem;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-gray);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* How It Works */
+        .how-it-works {
+            background: var(--darker-gray);
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .step {
+            position: relative;
+            padding: 2.5rem;
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.5s ease;
+        }
+
+        .step.revealed {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .step:nth-child(2) {
+            transition-delay: 0.2s;
+        }
+
+        .step:nth-child(3) {
+            transition-delay: 0.4s;
+        }
+
+        .step-number {
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 8rem;
+            font-weight: 900;
+            color: rgba(0, 255, 136, 0.05);
+            line-height: 1;
+        }
+
+        .step-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .step-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--neon-green), var(--dark-green));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+
+        .step h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--neon-green);
+        }
+
+        .step p {
+            color: var(--text-gray);
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        /* Services */
+        .services {
+            background: var(--black);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .service-card {
+            background: var(--light-gray);
+            padding: 2.5rem;
+            border-radius: 16px;
+            border: 1px solid rgba(0, 255, 136, 0.1);
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: scale(0.9);
+        }
+
+        .service-card.revealed {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .service-card:hover {
+            border-color: var(--neon-green);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 255, 136, 0.15);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        .service-card p {
+            color: var(--text-gray);
+            line-height: 1.7;
+        }
+
+        /* Get In Touch */
+        .get-in-touch {
+            background: linear-gradient(135deg, var(--darker-gray) 0%, var(--black) 100%);
+            text-align: center;
+            padding: 10rem 0;
+        }
+
+        .get-in-touch h2 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff 0%, var(--neon-green) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+        }
+
+        .get-in-touch p {
+            font-size: 1.3rem;
+            color: var(--text-gray);
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Scroll Indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+
+        .scroll-indicator::before {
+            content: '';
+            display: block;
+            width: 2px;
+            height: 60px;
+            background: linear-gradient(to bottom, var(--neon-green), transparent);
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            section {
+                padding: 5rem 0;
+            }
+
+            .container {
+                padding: 0 1.5rem;
+            }
+
+            .logos {
+                gap: 2rem;
+            }
+
+            .case-stats {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .tech-element {
+                width: 80px !important;
+                height: 80px !important;
+            }
+
+            .steps {
+                gap: 2rem;
+            }
+        }
+
+        /* Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease;
+        }
+
+        .reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="floating-elements">
+            <div class="tech-element">
+                <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=200&h=200&fit=crop&auto=format" alt="AI">
+            </div>
+            <div class="tech-element">
+                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=200&h=200&fit=crop&auto=format" alt="Tech">
+            </div>
+            <div class="tech-element">
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=200&h=200&fit=crop&auto=format" alt="Technology">
+            </div>
+            <div class="tech-element">
+                <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=200&h=200&fit=crop&auto=format" alt="Digital">
+            </div>
+        </div>
+        <div class="hero-content">
+            <h1>Scale Faster With AI-Driven Growth Systems</h1>
+            <p>We build intelligent automation systems that eliminate bottlenecks, accelerate revenue, and unlock exponential growth for modern businesses.</p>
+            <a href="https://calendly.com/corey-arkgaze/coffee-with-mo" class="cta-button" target="_blank">Book Your Growth Call</a>
+        </div>
+        <div class="scroll-indicator"></div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="social-proof">
+        <div class="container">
+            <h3>Powered by industry-leading platforms</h3>
+            <div class="logos">
+                <div class="logo-item">Make</div>
+                <div class="logo-item">n8n</div>
+                <div class="logo-item">ClickUp</div>
+                <div class="logo-item">Zapier</div>
+                <div class="logo-item">OpenAI</div>
+                <div class="logo-item">Airtable</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section class="case-studies">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Real Results, Real Impact</h2>
+                <p>See how we've transformed businesses through intelligent automation and AI integration.</p>
+            </div>
+            <div class="cases-grid">
+                <div class="case-card">
+                    <div class="case-icon">🚀</div>
+                    <h3>SaaS Lead Qualification</h3>
+                    <p>Automated lead scoring and routing system that tripled qualified demos while reducing response time from hours to seconds.</p>
+                    <div class="case-stats">
+                        <div class="stat">
+                            <div class="stat-number" data-target="247">0</div>
+                            <div class="stat-label">% ROI</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number" data-target="6">0</div>
+                            <div class="stat-label">Weeks</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="case-card">
+                    <div class="case-icon">⚡</div>
+                    <h3>E-commerce Revenue Engine</h3>
+                    <p>AI-powered customer journey automation that increased average order value and reduced cart abandonment by 68%.</p>
+                    <div class="case-stats">
+                        <div class="stat">
+                            <div class="stat-number" data-target="340">0</div>
+                            <div class="stat-label">K Added MRR</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number" data-target="8">0</div>
+                            <div class="stat-label">Weeks</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="case-card">
+                    <div class="case-icon">💎</div>
+                    <h3>Agency Operations Overhaul</h3>
+                    <p>Complete workflow automation system that freed up 40+ hours weekly, allowing the team to double client capacity.</p>
+                    <div class="case-stats">
+                        <div class="stat">
+                            <div class="stat-number" data-target="42">0</div>
+                            <div class="stat-label">Hours Saved</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number" data-target="4">0</div>
+                            <div class="stat-label">Weeks</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>How We Work</h2>
+                <p>A proven process that delivers results every time.</p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <div class="step-icon">🎯</div>
+                        <h3>Growth Mapping Call</h3>
+                        <p>We start with a free 30-minute deep dive into your business. We identify bottlenecks, inefficiencies, and untapped opportunities where automation can create immediate impact and ROI.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <div class="step-icon">📋</div>
+                        <h3>Scope & Strategy</h3>
+                        <p>We create a detailed roadmap of your automation system. Every workflow, integration, and AI component is mapped out with clear milestones, timelines, and expected outcomes.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <div class="step-icon">⚙️</div>
+                        <h3>Build & Deliver</h3>
+                        <p>We build, test, and deploy your custom automation system. You'll receive full training, documentation, and ongoing support to ensure maximum adoption and results.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Our Services</h2>
+                <p>Comprehensive automation solutions tailored to your business needs.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🤖</div>
+                    <h3>AI Integration</h3>
+                    <p>Integrate cutting-edge AI models into your workflows for intelligent decision-making, content generation, and customer interactions.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔄</div>
+                    <h3>Workflow Automation</h3>
+                    <p>Eliminate repetitive tasks with smart automation systems that connect your tools and streamline your operations.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3>Data Pipeline Building</h3>
+                    <p>Create robust data pipelines that collect, transform, and deliver insights exactly where you need them.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💬</div>
+                    <h3>Customer Journey Automation</h3>
+                    <p>Design and implement automated customer experiences that drive engagement, conversions, and loyalty.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>Custom Integrations</h3>
+                    <p>Build bespoke integrations between any tools in your tech stack, even if they don't officially connect.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📈</div>
+                    <h3>Growth Systems</h3>
+                    <p>End-to-end automation systems designed to accelerate lead generation, sales, and customer success.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get In Touch -->
+    <section class="get-in-touch">
+        <div class="container">
+            <h2>Ready to Scale?</h2>
+            <p>Book a free 30-minute growth mapping call and discover how automation can transform your business.</p>
+            <a href="https://calendly.com/corey-arkgaze/coffee-with-mo" class="cta-button" target="_blank">Schedule Your Free Call</a>
+        </div>
+    </section>
+
+    <script>
+        // Parallax effect for floating elements
+        const hero = document.querySelector('.hero');
+        const techElements = document.querySelectorAll('.tech-element');
+
+        hero.addEventListener('mousemove', (e) => {
+            const mouseX = e.clientX / window.innerWidth;
+            const mouseY = e.clientY / window.innerHeight;
+
+            techElements.forEach((element, index) => {
+                const speed = (index + 1) * 20;
+                const x = (mouseX - 0.5) * speed;
+                const y = (mouseY - 0.5) * speed;
+                element.style.transform = `translate(${x}px, ${y}px)`;
+            });
+        });
+
+        // Scroll parallax for hero elements
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroContent = document.querySelector('.hero-content');
+
+            if (heroContent) {
+                heroContent.style.transform = `translateY(${scrolled * 0.5}px)`;
+                heroContent.style.opacity = 1 - (scrolled / 700);
+            }
+
+            techElements.forEach((element, index) => {
+                const speed = (index + 1) * 0.3;
+                element.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+        });
+
+        // Intersection Observer for reveal animations
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with reveal classes
+        document.querySelectorAll('.reveal, .case-card, .step, .service-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Animated counters for case studies
+        function animateCounter(element) {
+            const target = parseInt(element.getAttribute('data-target'));
+            const duration = 2000;
+            const increment = target / (duration / 16);
+            let current = 0;
+
+            const updateCounter = () => {
+                current += increment;
+                if (current < target) {
+                    element.textContent = Math.floor(current);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    element.textContent = target;
+                }
+            };
+
+            updateCounter();
+        }
+
+        // Observe stat numbers for animation
+        const statObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const statNumber = entry.target;
+                    if (!statNumber.classList.contains('animated')) {
+                        statNumber.classList.add('animated');
+                        animateCounter(statNumber);
+                    }
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.stat-number').forEach(stat => {
+            statObserver.observe(stat);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add stagger effect to case cards
+        document.querySelectorAll('.case-card').forEach((card, index) => {
+            card.style.transitionDelay = `${index * 0.2}s`;
+        });
+
+        // Add stagger effect to service cards
+        document.querySelectorAll('.service-card').forEach((card, index) => {
+            card.style.transitionDelay = `${index * 0.1}s`;
+        });
+
+        // Performance optimization: disable animations on mobile if needed
+        if (window.innerWidth < 768) {
+            document.querySelectorAll('.tech-element').forEach(el => {
+                el.style.animation = 'none';
+            });
+        }
+
+        // Preload images for better performance
+        const imageUrls = [
+            'https://images.unsplash.com/photo-1633356122544-f134324a6cee',
+            'https://images.unsplash.com/photo-1558494949-ef010cbdcc31',
+            'https://images.unsplash.com/photo-1518770660439-4636190af475',
+            'https://images.unsplash.com/photo-1639762681485-074b7f938ba0'
+        ];
+
+        imageUrls.forEach(url => {
+            const img = new Image();
+            img.src = url + '?w=200&h=200&fit=crop&auto=format';
+        });
+    </script>
+</body>
+</html>
