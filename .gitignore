@@ -1,0 +1,6 @@
+# local preview/scratch artifacts
+preview-*.png
+tt.html
+_*.html
+_*.js
+.DS_Store
